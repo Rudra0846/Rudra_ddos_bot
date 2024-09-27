@@ -440,7 +440,7 @@ def clear_users_command(message):
 
                 log_content = file.read()
 
-                if log_content.strip() == "":
+                if log_content.strip() == "24":
 
                     response = "USERS are already cleared. No data found ❌."
 
