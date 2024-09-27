@@ -98,7 +98,7 @@ allowed_user_ids = read_users()
 
 def log_command(user_id, target, port, time):
 
-    admin_id = ["5588464519"]
+    admin_id = ["5838856932"]
 
     user_info = bot.get_chat(user_id)
 
