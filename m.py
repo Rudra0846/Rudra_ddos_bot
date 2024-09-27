@@ -240,7 +240,7 @@ def set_approval_expiry_date(user_id, duration, time_unit):
 
 # Command handler for adding a user with approval time
 
-@bot.message_handler(commands=['add'])
+@bot.message_handler(commands=['24'])
 
 def add_user(message):
 
@@ -440,7 +440,7 @@ def clear_users_command(message):
 
                 log_content = file.read()
 
-                if log_content.strip() == "24":
+                if log_content.strip() == "":
 
                     response = "USERS are already cleared. No data found ❌."
 
